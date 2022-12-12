@@ -66,3 +66,45 @@ export const useGsapUpStagger = (item, delay = 0) => {
     );
   }, []);
 };
+
+export const useGsapPhotoDropping = (arr, delay = 0) => {
+  useEffect(() => {
+    const el = arr.map((item) => item.current);
+    gsap.fromTo(
+      el,
+      {
+        y: "-100vh",
+        scale: 0,
+      },
+      {
+        y: 0,
+        scale: 1,
+        duration: 2,
+        stagger: 0.2,
+        delay: delay,
+        ease: Expo.easeInOut,
+      }
+    );
+  }, []);
+};
+
+export const useGsapPhotoLavitate = (arr, trig) => {
+  useEffect(() => {
+    const el = arr.map((item) => item.current);
+    gsap.fromTo(
+      el,
+      {
+        y: 0,
+      },
+      {
+        y: "-50%",
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: trig.current,
+          scrub: 1,
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+};
