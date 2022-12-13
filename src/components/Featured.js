@@ -2,18 +2,24 @@ import { useRef } from "react";
 import {
   useGsapFeatureLeftShutterUnveil,
   useGsapFeatureRightShutterUnveil,
+  useGsapTitleUnveil,
 } from "../hooks/gsap";
 const Featured = () => {
+  const sectionTitleRef = useRef(null);
+
   const featureRef = useRef(null);
   const featureLeftShutterRef = useRef(null);
   const featureRightShutterRef = useRef(null);
 
+  useGsapTitleUnveil(sectionTitleRef, featureRef);
   useGsapFeatureLeftShutterUnveil(featureLeftShutterRef, featureRef);
   useGsapFeatureRightShutterUnveil(featureRightShutterRef, featureRef);
 
   return (
     <section className="featured wrapper" ref={featureRef}>
-      <h2 className="section-title ">Featured</h2>
+      <h2 className="section-title " ref={sectionTitleRef}>
+        Featured
+      </h2>
       <div className="features">
         <div className="features-left">
           <span className="features-title">90's telephone</span>

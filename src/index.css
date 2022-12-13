@@ -215,3 +215,13 @@ section {
   right: 0;
   bottom: 0;
 }
+
+.about p {
+  font-size: 3vw;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.about p:last-child {
+  margin-top: 3vw;
+}

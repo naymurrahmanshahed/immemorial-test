@@ -153,3 +153,23 @@ export const useGsapFeatureRightShutterUnveil = (item, trig) => {
     );
   }, []);
 };
+
+export const useGsapTitleUnveil = (item, trig) => {
+  useEffect(() => {
+    const el = item.current;
+    gsap.fromTo(
+      el,
+      {
+        x: "-100vh",
+      },
+      {
+        x: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: trig.current,
+          toggleActions: "play reverse play reverse",
+        },
+      }
+    );
+  }, []);
+};
