@@ -242,3 +242,24 @@ export const useGsapGalleryCategoryUnveil = (item, trig) => {
     );
   }, []);
 };
+
+export const useGsapFooterHeadline = (item, trig) => {
+  useEffect(() => {
+    const el = item.current;
+    gsap.fromTo(
+      el,
+      {
+        y: "-80%",
+      },
+      {
+        y: 0,
+        duration: 1,
+        ease: Expo.easeInOut,
+        scrollTrigger: {
+          trigger: trig.current,
+          toggleActions: "play ",
+        },
+      }
+    );
+  });
+};
