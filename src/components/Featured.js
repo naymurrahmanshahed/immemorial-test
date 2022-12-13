@@ -5,9 +5,8 @@ import {
   useGsapTitleUnveil,
 } from "../hooks/gsap";
 const Featured = () => {
-  const sectionTitleRef = useRef(null);
-
   const featureRef = useRef(null);
+  const sectionTitleRef = useRef(null);
   const featureLeftShutterRef = useRef(null);
   const featureRightShutterRef = useRef(null);
 
