@@ -263,3 +263,61 @@ export const useGsapFooterHeadline = (item, trig) => {
     );
   });
 };
+
+export const useGsapNotFoundHeadline = (item, vw = "-100vw") => {
+  useEffect(() => {
+    const el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        x: vw,
+      },
+      {
+        x: 0,
+        duration: 1.5,
+        ease: Expo.easeInOut,
+      }
+    );
+  }, []);
+};
+
+export const useGsapNotFoundImg = (item) => {
+  useEffect(() => {
+    const el = item.current;
+
+    gsap.fromTo(
+      el,
+      {
+        scale: 0,
+        borderRadius: "50%",
+      },
+      {
+        scale: 1,
+        borderRadius: 0,
+        duration: 4,
+        delay: 1,
+        ease: "elastic",
+      }
+    );
+  }, []);
+};
+
+export const useGsapBlogImgUnveil = (arr) => {
+  useEffect(() => {
+    const el = arr.map((item) => item.current);
+    console.log(el);
+    gsap.fromTo(
+      el,
+      {
+        scale: 0,
+      },
+      {
+        scale: 1,
+        duration: 1,
+        delay: 1,
+        ease: "elastic",
+      }
+    );
+  }, []);
+};
