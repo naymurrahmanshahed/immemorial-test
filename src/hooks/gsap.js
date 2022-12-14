@@ -316,7 +316,8 @@ export const useGsapBlogImgUnveil = (arr) => {
         scale: 1,
         duration: 1,
         delay: 1,
-        ease: "elastic",
+        stagger: 1,
+        ease: Expo.easeInOut,
       }
     );
   }, []);

@@ -21,10 +21,9 @@ const Blog = ({ needFullHeight }) => {
     <section className={`${needFullHeight && "m-h-100vh"}  blogs wrapper`}>
       <h2 className="section-title">Blog</h2>
       <div className="blog-wrapper">
-        <div className="blog-content">
+        <div className="blog-content" ref={blogImgRef1}>
           <div
             className="blog-photo blog-one"
-            ref={blogImgRef1}
             style={{
               backgroundImage:
                 'url("https://images.pexels.com/photos/210156/pexels-photo-210156.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
@@ -35,10 +34,9 @@ const Blog = ({ needFullHeight }) => {
             <p>Classic Blue Coupe Parked Besides Red Pickup Truck</p>
           </span>
         </div>
-        <div className="blog-content">
+        <div className="blog-content" ref={blogImgRef2}>
           <div
             className="blog-photo blog-two"
-            ref={blogImgRef2}
             style={{
               backgroundImage:
                 'url("https://images.pexels.com/photos/8885024/pexels-photo-8885024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
@@ -49,10 +47,9 @@ const Blog = ({ needFullHeight }) => {
             <p>A Group of Friends Having a Party</p>
           </span>
         </div>
-        <div className="blog-content">
+        <div className="blog-content" ref={blogImgRef3}>
           <div
             className="blog-photo blog-three"
-            ref={blogImgRef3}
             style={{
               backgroundImage:
                 'url("https://images.pexels.com/photos/8885036/pexels-photo-8885036.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
@@ -63,10 +60,9 @@ const Blog = ({ needFullHeight }) => {
             <p>Back View of a Man Typing on a Keyboard while Sitting</p>
           </span>
         </div>
-        <div className="blog-content">
+        <div className="blog-content" ref={blogImgRef4}>
           <div
             className="blog-photo blog-four"
-            ref={blogImgRef4}
             style={{
               backgroundImage:
                 'url("https://images.pexels.com/photos/10600768/pexels-photo-10600768.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
@@ -77,10 +73,9 @@ const Blog = ({ needFullHeight }) => {
             <p>Close-Up Photo of a Person Using a Pink Rotary Phone</p>
           </span>
         </div>
-        <div className="blog-content">
+        <div className="blog-content" ref={blogImgRef5}>
           <div
             className="blog-photo blog-five"
-            ref={blogImgRef5}
             style={{
               backgroundImage:
                 'url("https://images.pexels.com/photos/6983032/pexels-photo-6983032.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
