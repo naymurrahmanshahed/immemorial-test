@@ -367,7 +367,7 @@ section {
   position: absolute;
   z-index: 1;
 
-  background-color: var(--color-darker);
+  background-color: var(--color-primary);
   color: var(--color-lighter);
   left: 0;
   right: 0;
